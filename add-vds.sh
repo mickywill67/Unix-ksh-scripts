@@ -1,0 +1,6 @@
+ldm add-vdsdev /dev/rdsk/c0t60060E8016011300000101130000030Ad0s2 030A@primary-vds0
+ldm add-vdsdev /dev/rdsk/c0t60060E8016011300000101130000030Bd0s2 030B@primary-vds0
+ldm add-vdsdev /dev/rdsk/c0t60060E8016011300000101130000031Dd0s2 031D@primary-vds0
+ldm add-vdsdev /dev/rdsk/c0t60060E80160113000001011300000307d0s2 0307@primary-vds0
+ldm add-vdsdev /dev/rdsk/c0t60060E80160113000001011300000308d0s2 0308@primary-vds0
+ldm add-vdsdev /dev/rdsk/c0t60060E80160113000001011300000309d0s2 0309@primary-vds0

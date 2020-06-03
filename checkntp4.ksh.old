@@ -1,0 +1,19 @@
+#!/bin/ksh
+
+HOST=`uname -n`
+OS=`uname -s`
+let NTPT=0
+let CHRONY=0
+
+if [[ "$OS" = "SunOS" ]]; then
+    let x=1
+elif [[ "$OS" = "Linux" ]]; then
+   if /sbin/service ntpd status >/dev/null 2>&1 ; then
+     echo $HOST >> /common/unixadmins/micky/ntpt.out
+   elif /sbin/service chronyd status > /dev/null 2>&1 ; then
+     echo $HOST >> /common/unixadmins/micky/chrony.out
+   else 
+      print "$HOST - linux NTP and chronyd not running"
+   fi
+fi
+
